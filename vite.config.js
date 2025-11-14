@@ -1,10 +1,17 @@
 import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
+import react from '@vitejs/plugin-react'; // Assuming React
+import path from 'path';
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  server: {
-    host: '0.0.0.0',
-  }
-})
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './src'), // Maps @ to src/
+    },
+  },
+  build: {
+    rollupOptions: {
+      external: [], // Add any true externals here if needed (rare for client apps)
+    },
+  },
+});
