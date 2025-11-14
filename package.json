@@ -3,11 +3,13 @@
   "version": "1.0.0",
   "private": true,
   "dependencies": {
+    "@vitejs/plugin-react": "^5.1.1",
     "firebase": "^12.6.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.22.0",
-    "react-scripts": "5.0.1"
+    "react-scripts": "5.0.1",
+    "vite": "^7.2.2"
   },
   "scripts": {
     "start": "react-scripts start",
